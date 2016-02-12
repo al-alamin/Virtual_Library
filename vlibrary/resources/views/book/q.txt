@@ -1,0 +1,25 @@
+1.borrow history table e  ownedbooklistid thakle(some has borrowed the book) and actualReturndate null (actual reaturn date null hoya mane book return kora hoy nai) thakle oi data  jate insert kora jabe na. because that book has already been loaned to someone and has not been returned.
+
+2. if an insert is successful in borrow history that means a book has been loaned ie successfully inserted in borrowhistory table then write a trigger that will take the ownedBookListId from borrow history table and update the isAvailable field as 0 or false in the ownedbooklist table with with the corresponding ownedbooklistid
+
+3. Similarly  if an insert is successful in borrow history that means a book has been loaned ie successfully inserted in borrowhistory table then write a trigger that will take the ownedBookListId and borrowerId from borrow history table and update the response time as current time in the message table. join borrowHistory table and message table on  ownedBookListId and borrowerId 
+
+3. similarly when a book is returned in borrow history table the actualReturnDate field is made not Null 
+(If actualReturnDate is null then the book has not been return)
+so if ActuralReturnDate is updated that mean book has been returned
+so write a trigger which will check if the there is an update in actualReturnDate field then the trigger will take the ownedBookListId from borrow history table and update the isAvailable field as 1 or true in the ownedbooklist table with  the corresponding ownedbooklistid
+
+2.In borrow History table  return date is expected return date... actual return date jodi return date er cheye beshi hoy tar mane defaulter hoiche so
+write a procedure that will return borrower ids( that is defaulter ids) 
+
+// write some procedure with complex query that has not been implemented in the system
+
+ Write a procedure that will return userName who has the hightest rating
+ Write a procedure that will return Bookname that has been borrowed most time. (join borrowHistory table ownedbooklist table and bookInfo Table)
+ Write a procedure that will return the bookName which has been requested most times
+ Write a procedure that will return top book owner list(from ownedbooklist table and user table)
+ Write a procedure that will in which location there is maximun no of books
+////
+
+
+and so many one can be written

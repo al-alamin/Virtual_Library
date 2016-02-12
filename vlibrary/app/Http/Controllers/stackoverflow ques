@@ -1,0 +1,24 @@
+select obl.ownedbooklistid
+from bookinfo, ownedbooklist owl
+where (bookinfo.bookid = owl.bookid)
+and (bookinfo.bookname='something')
+
+intersect
+
+select obl.ownedbooklistid
+from bookinfoauthors bia,  authors ,ownedbooklist owl,
+where (authors.authorid = bia.authorid)
+and (bia.bookid = owl.bookid)
+
+and (
+ (authors.authorname = 'something1')
+or (authors.authorname = 'something2')
+or (authors.authorname = 'something3')
+)
+
+
+Here i will have to check variable number of authors.
+Like $AutherName=['something1','something2','something3',...]
+
+I am using laravel with mysql (mysql does not support intersect)
+How can i do these whole query with laravel querybuilder or raw php
